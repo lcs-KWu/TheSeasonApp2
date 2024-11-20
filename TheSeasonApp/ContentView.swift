@@ -25,7 +25,21 @@ struct ContentView: View {
 
 struct ExtractedView: View {
     //stored propertie
-    
+    let title : String
+    let text1 : String
+    let text2 : String
+    let text3 : String
+    let text4 : String
+    var Season: String
+    //icon
+    var Iconname : String {
+        if Season == Spring{
+            return"cloud.rain,fill"
+        }else{
+            
+        }
+            
+    }
     var body: some View {
         HStack{
             Image(systemName: "cloud.rain.fill")
