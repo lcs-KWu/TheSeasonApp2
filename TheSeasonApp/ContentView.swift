@@ -11,7 +11,9 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List{
-                ExtractedView()
+                SeasonView(ProvidedSeason: Spring)
+                SeasonView(ProvidedSeason: Summer)
+                SeasonView(ProvidedSeason: Fall)
             }
             .navigationTitle("The Seasons")
         }
@@ -23,45 +25,4 @@ struct ContentView: View {
     ContentView()
 }
 
-struct ExtractedView: View {
-    //stored propertie
-    let title : String
-    let text1 : String
-    let text2 : String
-    let text3 : String
-    let text4 : String
-    var Season: String
-    //icon
-    var Iconname : String {
-        if Season == Spring{
-            return"cloud.rain,fill"
-        }else{
-            
-        }
-            
-    }
-    var body: some View {
-        HStack{
-            Image(systemName: "cloud.rain.fill")
-                .resizable()
-                .frame(width: 60, height: 60)
-                .offset(x: 0 , y: -90)
-            
-            VStack{
-                Text("Spring")
-                    .font(.system(size: 30, weight: .semibold))
-                    .offset(x: -65, y: 10)
-                Spacer()
-                Text(" In spring, all flowers take flight,")
-                    .font(.system(size: 20))
-                Text(" Painting fields with a colorful sight.")
-                    .font(.system(size: 20))
-                Text(" With each gentle breeze come blossoms and bees, ")
-                    .font(.system(size: 20))
-                Text(" And the world wakes to warmth and delight.")
-                    .font(.system(size: 20))
-                
-            }
-        }
-    }
-}
+
